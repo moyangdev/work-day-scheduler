@@ -21,4 +21,25 @@ var loadCalendar = function() {
     $('#5pm .description').val(localStorage.getItem("5pm"))
 }
 
+var auditCalendar = function() {
+
+    //variable for current timestamp
+    var currentTime  = moment().hours();
+
+    //check calendar time against current time and add color block
+    $(".time-block").each(function () {
+        var calendarTime = parseInt($(this).attr("id"));
+        if (calendarTime < currentTime) {
+            $(this).addClass("past");
+        } 
+        else if (calendarTime > currentTime) {
+            $(this).addClass("future");
+        }
+        else {
+            $(this).addClass("present");
+        }
+    })
+};
+
 loadCalendar();
+auditCalendar();
