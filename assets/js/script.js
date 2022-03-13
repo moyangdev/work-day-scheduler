@@ -10,25 +10,26 @@ localStorage.setItem(hour, description);
 
 //retrieves calendar from local storage
 var loadCalendar = function() {
-    $('#9am .description').val(localStorage.getItem("9am"))
-    $('#10am .description').val(localStorage.getItem("10am"))
-    $('#11am .description').val(localStorage.getItem("11am"))
-    $('#12pm .description').val(localStorage.getItem("12pm"))
-    $('#1pm .description').val(localStorage.getItem("1pm"))
-    $('#2pm .description').val(localStorage.getItem("2pm"))
-    $('#3pm .description').val(localStorage.getItem("3pm"))
-    $('#4pm .description').val(localStorage.getItem("4pm"))
-    $('#5pm .description').val(localStorage.getItem("5pm"))
+    $('#9 .description').val(localStorage.getItem("9"))
+    $('#10 .description').val(localStorage.getItem("10"))
+    $('#11 .description').val(localStorage.getItem("11"))
+    $('#12 .description').val(localStorage.getItem("12"))
+    $('#13 .description').val(localStorage.getItem("13"))
+    $('#14 .description').val(localStorage.getItem("14"))
+    $('#15 .description').val(localStorage.getItem("15"))
+    $('#16 .description').val(localStorage.getItem("16"))
+    $('#17 .description').val(localStorage.getItem("17"))
 }
 
 var auditCalendar = function() {
 
     //variable for current timestamp
     var currentTime  = moment().hours();
-
+    //console.log(currentTime);
     //check calendar time against current time and add color block
     $(".time-block").each(function () {
         var calendarTime = parseInt($(this).attr("id"));
+        //console.log(calendarTime);
         if (calendarTime < currentTime) {
             $(this).addClass("past");
         } 
