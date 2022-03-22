@@ -1,6 +1,13 @@
 # Work Day Scheduler
 ## Bootcamp Challenge 05: Third-Party APIs
 
+## Description
+This is a simple calendar application that allows users to save events for business hours of the day (9am - 5pm). Each time block is color-coded to indicate past, present, or future. 
+
+## Technologies
+This app will run in the browser. It uses HTML and CSS powered by jQuery and Moment.js.
+
+## Instructions
 <b>User Story:</b><br />
 AS AN employee with a busy schedule<br />
 I WANT to add important events to a daily planner<br />
